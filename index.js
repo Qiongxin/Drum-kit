@@ -5,12 +5,12 @@ for (let i = 0; i < buttons.length; i++) {
     playSound(buttons[i].innerText)
     addAnimation(buttons[i].innerText)
   })
-
-  buttons[i].addEventListener("keydown", (event) => {
-    playSound(event.key)
-    addAnimation(event.key)
-  })
 }
+
+document.addEventListener("keydown", (event) => {
+  playSound(event.key)
+  addAnimation(event.key)
+})
 
 const playSound = (key) => {
   switch (key) {
